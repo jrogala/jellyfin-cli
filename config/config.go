@@ -17,7 +17,7 @@ func Init() {
 	viper.SetEnvPrefix("JELLYFIN")
 	viper.AutomaticEnv()
 
-	viper.SetDefault("url", "http://192.168.1.69:8096")
+	viper.SetDefault("url", "")
 
 	_ = viper.ReadInConfig()
 }
