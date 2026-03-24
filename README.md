@@ -39,23 +39,22 @@ jellyfin login -u admin -p password
 
 ```bash
 $ jellyfin libraries
-ID                                NAME    TYPE
-507f1f77bcf86cd79943b735          Movies  movies
-507f1f77bcf86cd79943b736          Shows   tvshows
+ID                                NAME          TYPE
+f137a2dd21bbc1b99aa5c0f6bf02a805  Movies        movies
+7e64e319657a9516ec78490da03edccb  Music         music
+b26028d1e9bd4b29c82f1bfc13f523d2  TV en direct  livetv
 
-$ jellyfin search "Interstellar"
-Results: 2
+$ jellyfin search "Dexter"
+Results: 16
 
-ID                                TYPE   NAME          YEAR
-507f1f77bcf86cd79943b735          Movie  Interstellar  2014
-507f1f77bcf86cd79943b736          Movie  Interstellar  2024
-
-$ jellyfin scan
-Library scan started
+ID                                TYPE   NAME                              YEAR
+f92febffef45ee1015ec6878292413aa  Movie  Dexter S01E11 - Truth Be Told     2006
+58c757e688f2bb832f34343acc919cf0  Movie  Dexter S01E12 - Born Free         2006
+816babf4d9a5f41778d33f096cf21803  Movie  Dexter S02E01 - It's Alive!       2007
 
 $ jellyfin sessions
-ID            CLIENT          DEVICE    USER   NOW PLAYING
-abc123def4    Jellyfin Web    Chrome    admin  Interstellar
+ID                                CLIENT        DEVICE  USER    NOW PLAYING
+6e75dad0e95c74a50807ab20de3aff04  jellyfin-cli  cli     claude
 ```
 
 ## JSON Output
