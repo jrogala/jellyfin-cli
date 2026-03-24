@@ -38,18 +38,25 @@ jellyfin login -u admin -p password
 ## Examples
 
 ```bash
-# Login and browse libraries
-jellyfin login -u admin -p password
-jellyfin libraries
+$ jellyfin libraries
+ID            NAME    TYPE
+507f1f77bc..  Movies  movies
+507f1f77bd..  Shows   tvshows
+507f1f77be..  Music   music
 
-# Search for a movie
-jellyfin search "Interstellar"
+$ jellyfin search "Interstellar"
+Results: 2
 
-# Trigger a full library scan
-jellyfin scan --library "Movies"
+ID            TYPE   NAME          YEAR
+507f1f77bc..  Movie  Interstellar  2014
+507f1f77bd..  Movie  Interstellar  2024
 
-# Show active streaming sessions
-jellyfin sessions
+$ jellyfin scan --library "Movies"
+Library scan started: Movies
+
+$ jellyfin sessions
+ID            USER   CLIENT          DEVICE        NOW PLAYING
+abc123..      admin  Jellyfin Web    Chrome        Interstellar
 ```
 
 ## JSON Output
