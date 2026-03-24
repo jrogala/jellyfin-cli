@@ -25,38 +25,37 @@ jellyfin login -u admin -p password
 |---|---|
 | `login` | Authenticate with Jellyfin server |
 | `libraries` | List media libraries |
-| `movies` | List movies in a library |
+| `movies` | List all movies |
 | `search` | Search across all media |
 | `info` | Show detailed item info |
 | `update` | Update item metadata |
 | `identify` | Identify/match an item to an external provider |
 | `refresh` | Refresh item metadata from providers |
-| `scan` | Trigger a library scan |
-| `sessions` | List active sessions |
+| `scan` | Scan all libraries for changes |
+| `sessions` | Show active playback sessions |
 | `items` | List or filter items |
 
 ## Examples
 
 ```bash
 $ jellyfin libraries
-ID            NAME    TYPE
-507f1f77bc..  Movies  movies
-507f1f77bd..  Shows   tvshows
-507f1f77be..  Music   music
+ID                                NAME    TYPE
+507f1f77bcf86cd79943b735          Movies  movies
+507f1f77bcf86cd79943b736          Shows   tvshows
 
 $ jellyfin search "Interstellar"
 Results: 2
 
-ID            TYPE   NAME          YEAR
-507f1f77bc..  Movie  Interstellar  2014
-507f1f77bd..  Movie  Interstellar  2024
+ID                                TYPE   NAME          YEAR
+507f1f77bcf86cd79943b735          Movie  Interstellar  2014
+507f1f77bcf86cd79943b736          Movie  Interstellar  2024
 
-$ jellyfin scan --library "Movies"
-Library scan started: Movies
+$ jellyfin scan
+Library scan started
 
 $ jellyfin sessions
-ID            USER   CLIENT          DEVICE        NOW PLAYING
-abc123..      admin  Jellyfin Web    Chrome        Interstellar
+ID            CLIENT          DEVICE    USER   NOW PLAYING
+abc123def4    Jellyfin Web    Chrome    admin  Interstellar
 ```
 
 ## JSON Output
