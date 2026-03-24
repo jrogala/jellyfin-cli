@@ -2,6 +2,14 @@
 
 CLI for Jellyfin media server management and browsing.
 
+## Install
+
+Download a binary from the [latest release](https://github.com/jrogala/jellyfin-cli/releases/latest), or install with Go:
+
+```bash
+go install github.com/jrogala/jellyfin-cli@latest
+```
+
 ## Setup
 
 Set `JELLYFIN_URL` env var or use config file, then authenticate:
